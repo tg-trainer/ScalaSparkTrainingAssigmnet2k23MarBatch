@@ -1,15 +1,15 @@
 package RitikKuril
 
 object LastElementList {
-    def Last(a:List[Int]):Int={
+    def Last(list:List[Int]):Int={
 
-        if(a.isEmpty==true)
+        if(list.isEmpty==true)
             {
                 return -1;
             }
-        else if(a.length==1)
-            return a.head;
+        else if(list.length==1)
+            return list.head;
         else
-            Last(a.tail);
+            Last(list.tail);
     }
 }
