@@ -1,7 +1,10 @@
 package ShlokThakkar
 import ShlokThakkar.Assignment1.countSquares
 import ShlokThakkar.Assignment2Q1.Factorial
-import ShlokThakkar.Assignment2Q2.{Fibonacci, LastElementOfList};
+import ShlokThakkar.Assignment2Q2.{Fibonacci, LastElementOfList}
+import ShlokThakkar.RandomSelect.RandomNum
+
+import scala.collection.mutable.ListBuffer;
 
 
 object Main extends App {
@@ -15,4 +18,7 @@ object Main extends App {
 
   //Last Element of List
   assert(LastElementOfList(List(1,2,3,4,5,6))==6,"Wrong Last Element")
+
+  val list = RandomNum(3,List('a','b','c','d','e','f','g'))
+  println(list)
 }
