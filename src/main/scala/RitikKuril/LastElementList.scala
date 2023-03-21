@@ -1,7 +1,7 @@
 package RitikKuril
 
 object LastElementList {
-    def Last(list:List[Int]):Int={
+    def last(list:List[Int]):Int={
 
         if(list.isEmpty==true)
             {
@@ -10,6 +10,6 @@ object LastElementList {
         else if(list.length==1)
             return list.head;
         else
-            Last(list.tail);
+            last(list.tail);
     }
 }
