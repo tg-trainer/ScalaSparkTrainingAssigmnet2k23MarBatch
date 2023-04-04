@@ -1,4 +1,5 @@
 package Mehul
+
 import scala.collection.mutable.ListBuffer
 object Assignment6_Q9 {
   //drop the n th element from the list

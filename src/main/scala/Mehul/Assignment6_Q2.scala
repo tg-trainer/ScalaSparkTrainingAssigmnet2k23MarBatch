@@ -1,32 +1,38 @@
 package Mehul
+
 //iport
 object Assignment6_Q2 {
-  // have taken from internet (to understand use of lazylist)
-  def numberStream(n: Int):
-  LazyList[Int] = LazyList.from(n)
-
-  println(numberStream(10))
-
-  // Defining Sieve of Eratosthenes
-  def sieve_of_Eratosthenes(stream: LazyList[Int]):
-  LazyList[Int] = stream.head #:: sieve_of_Eratosthenes(
-    (stream.tail)
-      filter (x => x % stream.head!= 0)
-  )
-
-  println(sieve_of_Eratosthenes(numberStream(10)))
+  def nthPrime(n: Int): Int = {
 
 
-  val no_of_primes = sieve_of_Eratosthenes(numberStream(2))
+    // Sieve of Eratosthenes from gfg
 
+    def isPrime(num: Int): Boolean = {
+      if (num <= 1) false
+      else if (num <= 3) true
+      else if (num % 2 == 0 || num % 3 == 0) false
+      else {
+        var i = 5
+        while (i * i <= num) {
+          if (num % i == 0 || num % (i + 2) == 0) return false
+          // increments by 6 instead of 2 to skip over multiples of 2 and 3
+          // as all other primes are of the form 6k±1
+          i += 6
+        }
+        true
+      }
+    }
 
-  println(no_of_primes)
-  (no_of_primes take 7) foreach {
-    println(_)
+    def findPrime(current: Int, count: Int): Int = {
+      if (count == n) current
+      else {
+        val next = current + 1
+        if (isPrime(next)) findPrime(next, count + 1)
+        else findPrime(next, count)
+      }
+    }
+
+    findPrime(2, 1)
   }
 
- /*def main(args:Array[String]): Unit =
-  {
-
-  }/*
 }

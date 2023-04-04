@@ -1,3 +1,5 @@
+package Mehul
+
 import scala.annotation.tailrec
 
 object Assignment2 {
