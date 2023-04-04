@@ -12,7 +12,7 @@ object Assignment6_Q7 {
   /*def main(args:Array[String]): Unit =
   {
     val a=List("today","is","a","wonderful","day")
-    print(BuiltIn(a))
+    print(BuiltIn(List("today","is","a","wonderful","day")))
   }*/
 
 }

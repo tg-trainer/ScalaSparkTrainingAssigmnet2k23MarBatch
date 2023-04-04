@@ -1,4 +1,5 @@
 package Mehul
+
 import scala.annotation.tailrec
   import scala.collection.mutable.ListBuffer
 //import MMehul.Assignment6_Q5.solve
@@ -26,7 +27,7 @@ object Assignment6_Q11 {
      insert_at_pos(list,position,value,0,new_list)
     }
 
-  /*def main(args:Array[String]): Unit =
+ /* def main(args:Array[String]): Unit =
   {
     print(insert_in_list(List(2,3,4,5,6,7,8,9,10),5,90))
   }*/

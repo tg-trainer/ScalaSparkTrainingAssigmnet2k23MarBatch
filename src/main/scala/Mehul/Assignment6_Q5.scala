@@ -1,4 +1,5 @@
 package Mehul
+
 import scala.util.Random
 object Assignment6_Q5 {
 
